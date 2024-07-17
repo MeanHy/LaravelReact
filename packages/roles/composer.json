@@ -1,0 +1,39 @@
+{
+    "name": "huyle/roles",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+      "psr-4": {
+            "Huyle\\Roles\\": "src/",
+            "Huyle\\Roles\\Providers\\":"src/Providers/",
+            "Huyle\\Roles\\Database\\Migrations\\": "database/migrations/",
+            "Huyle\\Roles\\Database\\Seeders\\": "database/seeders/"
+        },
+        "classmap": [
+            "src/Controllers",
+            "src/Providers",
+            "src/Models",
+            "./routes"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Huyle\\Roles\\Providers\\RoleServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "@php artisan migrate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+    
+}
