@@ -1,5 +1,5 @@
 <?php
-use Huyle\User\Controllers\UserController;
+use Huyle\Renvenues\Controllers\RenvenuesController;
 use Illuminate\Support\Facades\Route;
 
-Route::resource('user', UserController::class);
+Route::resource('renvenues', RenvenuesController::class);

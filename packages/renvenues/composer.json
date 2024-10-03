@@ -1,0 +1,39 @@
+{
+    "name": "huyle/renvenues",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+      "psr-4": {
+            "Huyle\\Renvenues\\": "src/",
+            "Huyle\\Renvenues\\Providers\\":"src/Providers/",
+            "Huyle\\Renvenues\\Database\\Migrations\\": "database/migrations/",
+            "Huyle\\Renvenues\\Database\\Seeders\\": "database/seeders/"
+        },
+        "classmap": [
+            "src/Controllers",
+            "src/Providers",
+            "src/Models",
+            "./routes"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Huyle\\Renvenues\\Providers\\RenvenuesServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "@php artisan migrate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+    
+}
